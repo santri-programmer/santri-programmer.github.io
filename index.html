@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Harian Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-calendar-alt"></i> Jadwal Harian</h1>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+        
+        <div class="schedule-grid">
+            <div class="time-card">
+                <div class="time-container">
+                    <div class="time-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <div>18.00 – 19.00</div>
+                </div>
+                <div class="activity-container">
+                    <div class="activity-item">
+                        Masjid <span class="emoji">🕌</span>
+                    </div>
+                    <div class="activity-item">
+                        Baca Al-Qur'an <span class="emoji">📖</span>
+                    </div>
+                    <div class="activity-item">
+                        Buat Jadwal <span class="emoji">📝</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="time-card">
+                <div class="time-container">
+                    <div class="time-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div>19.00 – 22.00</div>
+                </div>
+                <div class="activity-container">
+                    <div class="activity-item">
+                        Bekerja <span class="emoji">💻</span>
+                    </div>
+                    <div class="activity-item">
+                        Baca Buku <span class="emoji">📚</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="time-card">
+                <div class="time-container">
+                    <div class="time-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <div>22.00 – 04.30</div>
+                </div>
+                <div class="activity-container">
+                    <div class="activity-item">
+                        Istirahat <span class="emoji">😴</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="time-card">
+                <div class="time-container">
+                    <div class="time-icon">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <div>04.30 – 06.00</div>
+                </div>
+                <div class="activity-container">
+                    <div class="activity-item">
+                        Masjid <span class="emoji">🕌</span>
+                    </div>
+                    <div class="activity-item">
+                        Baca Al-Qur'an <span class="emoji">📖</span>
+                    </div>
+                    <div class="activity-item">
+                        Baca Buku <span class="emoji">📚</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="time-card">
+                <div class="time-container">
+                    <div class="time-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div>06.00 – 11.00</div>
+                </div>
+                <div class="activity-container">
+                    <div class="activity-item">
+                        Bekerja <span class="emoji">💻</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="time-card">
+                <div class="time-container">
+                    <div class="time-icon">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <div>11.00 – 13.00</div>
+                </div>
+                <div class="activity-container">
+                    <div class="activity-item">
+                        Ibadah <span class="emoji">🙏</span>
+                    </div>
+                    <div class="activity-item">
+                        Istirahat <span class="emoji">😌</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="time-card">
+                <div class="time-container">
+                    <div class="time-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <div>13.00 – 15.00</div>
+                </div>
+                <div class="activity-container">
+                    <div class="activity-item">
+                        Olahraga <span class="emoji">🏃</span>
+                    </div>
+                    <div class="activity-item">
+                        Makan <span class="emoji">🍽</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="time-card">
+                <div class="time-container">
+                    <div class="time-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div>15.00 – 17.00</div>
+                </div>
+                <div class="activity-container">
+                    <div class="activity-item">
+                        Bekerja <span class="emoji">💻</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="time-card">
+                <div class="time-container">
+                    <div class="time-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <div>17.00 – 18.00</div>
+                </div>
+                <div class="activity-container">
+                    <div class="activity-item">
+                        Waktu Bebas <span class="emoji">🎵</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="fab" id="printBtn" title="Cetak Jadwal">
+        <i class="fas fa-print"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
