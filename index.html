@@ -1,175 +1,150 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jadwal Harian Premium</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1><i class="fas fa-calendar-alt"></i> Jadwal Harian</h1>
-            <button class="theme-toggle" id="themeToggle">
-                <i class="fas fa-moon"></i>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Donasi - Batasan Upload Harian</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+      <header class="text-center mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-purple-700 mb-2">
+          <i class="fas fa-hand-holding-heart mr-3"></i>Sistem Pencatatan Donasi
+        </h1>
+        <p class="text-gray-600 mb-4">Catat dan keluar donasi dengan mudah</p>
+        <div
+          id="tanggalHariIni"
+          class="inline-block bg-white px-4 py-2 rounded-lg shadow-sm text-gray-700 mb-4"
+        ></div>
+      </header>
+
+      <div
+        id="notifikasi"
+        class="mb-4 md:mb-6 text-center p-3 md:p-4 rounded-xl transition-all duration-300"
+      ></div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+          <i class="fas fa-plus-circle mr-2 text-purple-500"></i>Tambah Donasi
+          Baru
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label
+              for="donatur"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Nama Donatur</label
+            >
+            <select
+              id="donatur"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+            >
+              <option value="">Pilih Donatur</option>
+            </select>
+          </div>
+          <div>
+            <label
+              for="pemasukan"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Nominal Donasi</label
+            >
+            <input
+              type="number"
+              id="pemasukan"
+              placeholder="Masukkan nominal"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+            />
+          </div>
+          <div class="flex items-end">
+            <button
+              id="btnTambah"
+              class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg transition duration-200 flex items-center justify-center"
+            >
+              <span id="btnText">Tambah</span>
+              <i class="fas fa-plus ml-2"></i>
             </button>
-        </header>
-        
-        <div class="schedule-grid">
-            <div class="time-card">
-                <div class="time-container">
-                    <div class="time-icon">
-                        <i class="fas fa-mosque"></i>
-                    </div>
-                    <div>18.00 – 19.00</div>
-                </div>
-                <div class="activity-container">
-                    <div class="activity-item">
-                        Masjid <span class="emoji">🕌</span>
-                    </div>
-                    <div class="activity-item">
-                        Baca Al-Qur'an <span class="emoji">📖</span>
-                    </div>
-                    <div class="activity-item">
-                        Buat Jadwal <span class="emoji">📝</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="time-card">
-                <div class="time-container">
-                    <div class="time-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <div>19.00 – 22.00</div>
-                </div>
-                <div class="activity-container">
-                    <div class="activity-item">
-                        Bekerja <span class="emoji">💻</span>
-                    </div>
-                    <div class="activity-item">
-                        Baca Buku <span class="emoji">📚</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="time-card">
-                <div class="time-container">
-                    <div class="time-icon">
-                        <i class="fas fa-bed"></i>
-                    </div>
-                    <div>22.00 – 04.30</div>
-                </div>
-                <div class="activity-container">
-                    <div class="activity-item">
-                        Istirahat <span class="emoji">😴</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="time-card">
-                <div class="time-container">
-                    <div class="time-icon">
-                        <i class="fas fa-pray"></i>
-                    </div>
-                    <div>04.30 – 06.00</div>
-                </div>
-                <div class="activity-container">
-                    <div class="activity-item">
-                        Masjid <span class="emoji">🕌</span>
-                    </div>
-                    <div class="activity-item">
-                        Baca Al-Qur'an <span class="emoji">📖</span>
-                    </div>
-                    <div class="activity-item">
-                        Baca Buku <span class="emoji">📚</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="time-card">
-                <div class="time-container">
-                    <div class="time-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <div>06.00 – 11.00</div>
-                </div>
-                <div class="activity-container">
-                    <div class="activity-item">
-                        Bekerja <span class="emoji">💻</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="time-card">
-                <div class="time-container">
-                    <div class="time-icon">
-                        <i class="fas fa-hands-praying"></i>
-                    </div>
-                    <div>11.00 – 13.00</div>
-                </div>
-                <div class="activity-container">
-                    <div class="activity-item">
-                        Ibadah <span class="emoji">🙏</span>
-                    </div>
-                    <div class="activity-item">
-                        Istirahat <span class="emoji">😌</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="time-card">
-                <div class="time-container">
-                    <div class="time-icon">
-                        <i class="fas fa-running"></i>
-                    </div>
-                    <div>13.00 – 15.00</div>
-                </div>
-                <div class="activity-container">
-                    <div class="activity-item">
-                        Olahraga <span class="emoji">🏃</span>
-                    </div>
-                    <div class="activity-item">
-                        Makan <span class="emoji">🍽</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="time-card">
-                <div class="time-container">
-                    <div class="time-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div>15.00 – 17.00</div>
-                </div>
-                <div class="activity-container">
-                    <div class="activity-item">
-                        Bekerja <span class="emoji">💻</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="time-card">
-                <div class="time-container">
-                    <div class="time-icon">
-                        <i class="fas fa-headphones"></i>
-                    </div>
-                    <div>17.00 – 18.00</div>
-                </div>
-                <div class="activity-container">
-                    <div class="activity-item">
-                        Waktu Bebas <span class="emoji">🎵</span>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+          <i class="fas fa-list-alt mr-2 text-purple-500"></i>Daftar Donasi Hari
+          Ini
+        </h2>
+        <div class="overflow-x-auto">
+          <table id="tabelDonasi" class="w-full">
+            <thead>
+              <tr class="bg-gray-100 text-gray-700">
+                <th class="py-3 px-4 md:px-6 text-left rounded-tl-lg">
+                  Donatur
+                </th>
+                <th class="py-3 px-4 md:px-6 text-right">Nominal</th>
+                <th class="py-3 px-4 md:px-6 text-center rounded-tr-lg">
+                  Aksi
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data akan ditambahkan di sini -->
+            </tbody>
+            <tfoot>
+              <tr class="bg-gray-50 border-t border-gray-200">
+                <td class="py-3 px-4 md:px-6 font-semibold">Total</td>
+                <td
+                  id="totalDonasi"
+                  class="py-3 px-4 md:px-6 text-right font-mono font-semibold text-purple-700"
+                >
+                  Rp 0
+                </td>
+                <td class="py-3 px-4 md:px-6"></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6">
+        <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+          <i class="fas fa-cloud-upload-alt mr-2 text-purple-500"></i>Upload ke
+          Google Sheets
+        </h2>
+        <div
+          id="uploadStatus"
+          class="mb-4 text-center p-4 rounded-xl transition-all duration-300"
+        ></div>
+        <div class="flex flex-col md:flex-row md:items-center justify-between">
+          <p class="text-gray-600 mb-4 md:mb-0">
+            <i class="fas fa-info-circle mr-2 text-blue-500"></i>
+            <span id="uploadInfo">Upload data donasi ke Google Sheets</span>
+          </p>
+          <button
+            id="btnUpload"
+            class="bg-green-600 hover:bg-green-700 text-white py-2 px-6 rounded-lg transition duration-200 flex items-center justify-center"
+          >
+            <i class="fas fa-upload mr-2"></i>Upload Data
+          </button>
+        </div>
+        <div
+          id="mobileTotal"
+          class="mt-4 p-3 bg-purple-50 rounded-lg text-center md:hidden"
+        >
+          <span class="text-gray-700 font-medium">Total Donasi: </span>
+          <span
+            id="totalDonasiMobile"
+            class="font-mono font-semibold text-purple-700"
+            >Rp 0</span
+          >
+        </div>
+      </div>
     </div>
 
-    <button class="fab" id="printBtn" title="Cetak Jadwal">
-        <i class="fas fa-print"></i>
-    </button>
-
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
