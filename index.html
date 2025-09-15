@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistem Donasi - Batasan Upload Harian</title>
+    <title>Sistem Input Harian Data Jimpitan</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -15,9 +15,8 @@
     <div class="container mx-auto px-4 py-8 max-w-4xl">
       <header class="text-center mb-8">
         <h1 class="text-3xl md:text-4xl font-bold text-purple-700 mb-2">
-          <i class="fas fa-hand-holding-heart mr-3"></i>Sistem Pencatatan Donasi
+          <i class="fas fa-hand-holding-heart mr-3"></i>Sistem Input Harian
         </h1>
-        <p class="text-gray-600 mb-4">Catat dan keluar donasi dengan mudah</p>
         <div
           id="tanggalHariIni"
           class="inline-block bg-white px-4 py-2 rounded-lg shadow-sm text-gray-700 mb-4"
@@ -31,15 +30,14 @@
 
       <div class="bg-white rounded-xl shadow-md p-6 mb-6">
         <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-          <i class="fas fa-plus-circle mr-2 text-purple-500"></i>Tambah Donasi
-          Baru
+          <i class="fas fa-plus-circle mr-2 text-purple-500"></i>Tambah Nominal
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <label
               for="donatur"
               class="block text-sm font-medium text-gray-700 mb-1"
-              >Nama Donatur</label
+              >Nama</label
             >
             <select
               id="donatur"
@@ -52,7 +50,7 @@
             <label
               for="pemasukan"
               class="block text-sm font-medium text-gray-700 mb-1"
-              >Nominal Donasi</label
+              >Nominal Input</label
             >
             <input
               type="number"
@@ -75,16 +73,14 @@
 
       <div class="bg-white rounded-xl shadow-md p-6 mb-6">
         <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-          <i class="fas fa-list-alt mr-2 text-purple-500"></i>Daftar Donasi Hari
+          <i class="fas fa-list-alt mr-2 text-purple-500"></i>Daftar Input Hari
           Ini
         </h2>
         <div class="overflow-x-auto">
           <table id="tabelDonasi" class="w-full">
             <thead>
               <tr class="bg-gray-100 text-gray-700">
-                <th class="py-3 px-4 md:px-6 text-left rounded-tl-lg">
-                  Donatur
-                </th>
+                <th class="py-3 px-4 md:px-6 text-left rounded-tl-lg">Nama</th>
                 <th class="py-3 px-4 md:px-6 text-right">Nominal</th>
                 <th class="py-3 px-4 md:px-6 text-center rounded-tr-lg">
                   Aksi
@@ -122,7 +118,7 @@
         <div class="flex flex-col md:flex-row md:items-center justify-between">
           <p class="text-gray-600 mb-4 md:mb-0">
             <i class="fas fa-info-circle mr-2 text-blue-500"></i>
-            <span id="uploadInfo">Upload data donasi ke Google Sheets</span>
+            <span id="uploadInfo">Upload data input ke Google Sheets</span>
           </p>
           <button
             id="btnUpload"
