@@ -31,7 +31,7 @@ const daftarDonatur = [
   "Mas Agus",
   "Mas Izin",
   "Pak Abror",
-  "Mas Gustaf",
+  "Mas Gustaf"
 ];
 let dataDonasi = [];
 let sudahUploadHariIni = false;
